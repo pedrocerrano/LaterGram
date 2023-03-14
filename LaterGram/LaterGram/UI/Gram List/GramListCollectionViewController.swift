@@ -1,5 +1,5 @@
 //
-//  GramPostListCollectionViewController.swift
+//  GramListCollectionViewController.swift
 //  LaterGram
 //
 //  Created by iMac Pro on 3/13/23.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class GramPostListCollectionViewController: UICollectionViewController {
+class GramListCollectionViewController: UICollectionViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,7 +24,7 @@ class GramPostListCollectionViewController: UICollectionViewController {
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "gramsCell", for: indexPath) as? GramPostCollectionViewCell else { return UICollectionViewCell() }
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "gramsCell", for: indexPath) as? GramCollectionViewCell else { return UICollectionViewCell() }
 
         cell.configureUI()
     
@@ -71,7 +71,7 @@ class GramPostListCollectionViewController: UICollectionViewController {
 
 
 // MARK: - EXT: CollectionViewFlowLayout
-extension GramPostListCollectionViewController: UICollectionViewDelegateFlowLayout {
+extension GramListCollectionViewController: UICollectionViewDelegateFlowLayout {
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let width = view.bounds.width

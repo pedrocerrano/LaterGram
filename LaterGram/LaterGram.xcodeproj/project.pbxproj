@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		29D72B2729C0F4F400CBFD9E /* GramPostDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29D72B2629C0F4F400CBFD9E /* GramPostDetailVC.swift */; };
+		29D72B2729C0F4F400CBFD9E /* GramDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29D72B2629C0F4F400CBFD9E /* GramDetailVC.swift */; };
+		29D72B2A29C102B600CBFD9E /* DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29D72B2929C102B600CBFD9E /* DateFormatter.swift */; };
+		29D72B2C29C1036700CBFD9E /* FirebaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29D72B2B29C1036700CBFD9E /* FirebaseService.swift */; };
 		29E08F9329BFB9A90062FA80 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29E08F9229BFB9A90062FA80 /* AppDelegate.swift */; };
 		29E08F9529BFB9A90062FA80 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29E08F9429BFB9A90062FA80 /* SceneDelegate.swift */; };
 		29E08F9A29BFB9A90062FA80 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 29E08F9829BFB9A90062FA80 /* Main.storyboard */; };
@@ -17,12 +19,14 @@
 		29E08FAE29BFBC9D0062FA80 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 29E08FAD29BFBC9D0062FA80 /* FirebaseFirestore */; };
 		29E08FB029BFBC9D0062FA80 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 29E08FAF29BFBC9D0062FA80 /* FirebaseStorage */; };
 		29E08FB229BFBE120062FA80 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29E08FB129BFBE120062FA80 /* User.swift */; };
-		29E08FB429BFC11A0062FA80 /* GramPostListCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29E08FB329BFC11A0062FA80 /* GramPostListCollectionViewController.swift */; };
-		29E08FB929BFC68E0062FA80 /* GramPostCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29E08FB829BFC68E0062FA80 /* GramPostCollectionViewCell.swift */; };
+		29E08FB429BFC11A0062FA80 /* GramListCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29E08FB329BFC11A0062FA80 /* GramListCollectionViewController.swift */; };
+		29E08FB929BFC68E0062FA80 /* GramCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29E08FB829BFC68E0062FA80 /* GramCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		29D72B2629C0F4F400CBFD9E /* GramPostDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GramPostDetailVC.swift; sourceTree = "<group>"; };
+		29D72B2629C0F4F400CBFD9E /* GramDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GramDetailVC.swift; sourceTree = "<group>"; };
+		29D72B2929C102B600CBFD9E /* DateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatter.swift; sourceTree = "<group>"; };
+		29D72B2B29C1036700CBFD9E /* FirebaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseService.swift; sourceTree = "<group>"; };
 		29E08F8F29BFB9A90062FA80 /* LaterGram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LaterGram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		29E08F9229BFB9A90062FA80 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		29E08F9429BFB9A90062FA80 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -32,8 +36,8 @@
 		29E08FA029BFB9AA0062FA80 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		29E08FAA29BFBBCD0062FA80 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		29E08FB129BFBE120062FA80 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		29E08FB329BFC11A0062FA80 /* GramPostListCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GramPostListCollectionViewController.swift; sourceTree = "<group>"; };
-		29E08FB829BFC68E0062FA80 /* GramPostCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GramPostCollectionViewCell.swift; sourceTree = "<group>"; };
+		29E08FB329BFC11A0062FA80 /* GramListCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GramListCollectionViewController.swift; sourceTree = "<group>"; };
+		29E08FB829BFC68E0062FA80 /* GramCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GramCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,12 +53,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		29D72B2529C0F4CA00CBFD9E /* PostDetail */ = {
+		29D72B2529C0F4CA00CBFD9E /* Gram Detail */ = {
 			isa = PBXGroup;
 			children = (
-				29D72B2629C0F4F400CBFD9E /* GramPostDetailVC.swift */,
+				29D72B2629C0F4F400CBFD9E /* GramDetailVC.swift */,
 			);
-			path = PostDetail;
+			path = "Gram Detail";
+			sourceTree = "<group>";
+		};
+		29D72B2829C1028900CBFD9E /* Helper Files */ = {
+			isa = PBXGroup;
+			children = (
+				29D72B2929C102B600CBFD9E /* DateFormatter.swift */,
+				29D72B2B29C1036700CBFD9E /* FirebaseService.swift */,
+			);
+			path = "Helper Files";
 			sourceTree = "<group>";
 		};
 		29E08F8629BFB9A90062FA80 = {
@@ -78,6 +91,7 @@
 			children = (
 				29E08FA829BFBA430062FA80 /* Model */,
 				29E08FA929BFBA4B0062FA80 /* UI */,
+				29D72B2829C1028900CBFD9E /* Helper Files */,
 				29E08FA729BFBA000062FA80 /* Storyboards */,
 				29E08FA629BFB9F30062FA80 /* Supporting Files */,
 				29E08FAA29BFBBCD0062FA80 /* GoogleService-Info.plist */,
@@ -116,25 +130,25 @@
 		29E08FA929BFBA4B0062FA80 /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				29E08FB629BFC1720062FA80 /* PostList */,
-				29D72B2529C0F4CA00CBFD9E /* PostDetail */,
+				29E08FB629BFC1720062FA80 /* Gram List */,
+				29D72B2529C0F4CA00CBFD9E /* Gram Detail */,
 			);
 			path = UI;
 			sourceTree = "<group>";
 		};
-		29E08FB629BFC1720062FA80 /* PostList */ = {
+		29E08FB629BFC1720062FA80 /* Gram List */ = {
 			isa = PBXGroup;
 			children = (
-				29E08FB329BFC11A0062FA80 /* GramPostListCollectionViewController.swift */,
+				29E08FB329BFC11A0062FA80 /* GramListCollectionViewController.swift */,
 				29E08FB729BFC6710062FA80 /* Custom Views */,
 			);
-			path = PostList;
+			path = "Gram List";
 			sourceTree = "<group>";
 		};
 		29E08FB729BFC6710062FA80 /* Custom Views */ = {
 			isa = PBXGroup;
 			children = (
-				29E08FB829BFC68E0062FA80 /* GramPostCollectionViewCell.swift */,
+				29E08FB829BFC68E0062FA80 /* GramCollectionViewCell.swift */,
 			);
 			path = "Custom Views";
 			sourceTree = "<group>";
@@ -218,10 +232,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				29D72B2729C0F4F400CBFD9E /* GramPostDetailVC.swift in Sources */,
-				29E08FB929BFC68E0062FA80 /* GramPostCollectionViewCell.swift in Sources */,
+				29D72B2729C0F4F400CBFD9E /* GramDetailVC.swift in Sources */,
+				29E08FB929BFC68E0062FA80 /* GramCollectionViewCell.swift in Sources */,
+				29D72B2C29C1036700CBFD9E /* FirebaseService.swift in Sources */,
 				29E08FB229BFBE120062FA80 /* User.swift in Sources */,
-				29E08FB429BFC11A0062FA80 /* GramPostListCollectionViewController.swift in Sources */,
+				29D72B2A29C102B600CBFD9E /* DateFormatter.swift in Sources */,
+				29E08FB429BFC11A0062FA80 /* GramListCollectionViewController.swift in Sources */,
 				29E08F9329BFB9A90062FA80 /* AppDelegate.swift in Sources */,
 				29E08F9529BFB9A90062FA80 /* SceneDelegate.swift in Sources */,
 			);

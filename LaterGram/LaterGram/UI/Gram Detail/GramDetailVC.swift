@@ -1,5 +1,5 @@
 //
-//  GramPostDetailVC.swift
+//  GramDetailVC.swift
 //  LaterGram
 //
 //  Created by iMac Pro on 3/14/23.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class GramPostDetailVC: UIViewController {
+class GramDetailVC: UIViewController {
 
     //MARK: - OUTLETS
     @IBOutlet weak var gramPostImageView: UIImageView!

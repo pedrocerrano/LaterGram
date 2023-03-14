@@ -10,59 +10,60 @@ import UIKit
 class User {
     
     enum Key {
-        static let username             = "username"
-        static let gramPostMessage      = "message"
-        static let gramPostPhoto        = "photo"
-        static let gramPostCreationDate = "date"
-        static let gramPostUUID         = "UUID"
+        static let username         = "username"
+        static let gramMessage      = "message"
+        static let gramPhoto        = "photo"
+        static let gramCreationDate = "date"
+        static let gramUUID         = "UUID"
+        static let collectionType   = "gramPosts"
     }
     
     //MARK: - PROPERTIES
     let username: String
-    var gramPostMessage: String
-    var gramPostPhoto: String?
-    let gramPostCreationDate: Date
-    let gramPostUUID: String
+    var gramMessage: String
+    var gramPhoto: String?
+    let gramCreationDate: Date
+    let gramUUID: String
     
     //MARK: - CREATING THE JSON
     var dictionaryRepresentation: [String : AnyHashable] {
         [
-            Key.username             : self.username,
-            Key.gramPostMessage      : self.gramPostMessage,
-            Key.gramPostPhoto        : self.gramPostPhoto,
-            Key.gramPostCreationDate : self.gramPostCreationDate,
-            Key.gramPostUUID         : self.gramPostUUID
+            Key.username         : self.username,
+            Key.gramMessage      : self.gramMessage,
+            Key.gramPhoto        : self.gramPhoto,
+            Key.gramCreationDate : self.gramCreationDate,
+            Key.gramUUID         : self.gramUUID
         ]
     }
     
     //MARK: - INITIALIZER
-    init(username: String, gramPostMessage: String, gramPostPhoto: String? = nil, gramPostCreationDate: Date = Date(), gramPostUUID: String = UUID().uuidString) {
+    init(username: String, gramMessage: String, gramPhoto: String? = nil, gramCreationDate: Date = Date(), gramUUID: String = UUID().uuidString) {
         self.username = username
-        self.gramPostMessage = gramPostMessage
-        self.gramPostPhoto = gramPostPhoto
-        self.gramPostCreationDate = gramPostCreationDate
-        self.gramPostUUID = gramPostUUID
+        self.gramMessage = gramMessage
+        self.gramPhoto = gramPhoto
+        self.gramCreationDate = gramCreationDate
+        self.gramUUID = gramUUID
     }
 }
 
 extension User {
     convenience init?(fromDictionary dictionary: [String : Any]) {
         guard let username = dictionary[Key.username] as? String,
-              let message = dictionary[Key.gramPostMessage] as? String,
-              let photo = dictionary[Key.gramPostPhoto] as? String,
-              let date = dictionary[Key.gramPostCreationDate] as? Double,
-              let uuid = dictionary[Key.gramPostUUID] as? String else {
+              let message = dictionary[Key.gramMessage] as? String,
+              let photo = dictionary[Key.gramPhoto] as? String,
+              let date = dictionary[Key.gramCreationDate] as? Double,
+              let uuid = dictionary[Key.gramUUID] as? String else {
             print("Failed to initialize object.")
             return nil
         }
         
-        self.init(username: username, gramPostMessage: message, gramPostPhoto: photo, gramPostCreationDate: Date(timeIntervalSince1970: date), gramPostUUID: uuid)
+        self.init(username: username, gramMessage: message, gramPhoto: photo, gramCreationDate: Date(timeIntervalSince1970: date), gramUUID: uuid)
     }
 }
 
 
 extension User: Equatable {
     static func == (lhs: User, rhs: User) -> Bool {
-        return lhs.gramPostUUID == rhs.gramPostUUID
+        return lhs.gramUUID == rhs.gramUUID
     }
 }
