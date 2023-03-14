@@ -16,8 +16,8 @@
 		29E08FAE29BFBC9D0062FA80 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 29E08FAD29BFBC9D0062FA80 /* FirebaseFirestore */; };
 		29E08FB029BFBC9D0062FA80 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 29E08FAF29BFBC9D0062FA80 /* FirebaseStorage */; };
 		29E08FB229BFBE120062FA80 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29E08FB129BFBE120062FA80 /* User.swift */; };
-		29E08FB429BFC11A0062FA80 /* PostCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29E08FB329BFC11A0062FA80 /* PostCollectionViewController.swift */; };
-		29E08FB929BFC68E0062FA80 /* PostCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29E08FB829BFC68E0062FA80 /* PostCollectionViewCell.swift */; };
+		29E08FB429BFC11A0062FA80 /* GramPostListCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29E08FB329BFC11A0062FA80 /* GramPostListCollectionViewController.swift */; };
+		29E08FB929BFC68E0062FA80 /* GramPostCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29E08FB829BFC68E0062FA80 /* GramPostCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,8 +30,8 @@
 		29E08FA029BFB9AA0062FA80 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		29E08FAA29BFBBCD0062FA80 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		29E08FB129BFBE120062FA80 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		29E08FB329BFC11A0062FA80 /* PostCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCollectionViewController.swift; sourceTree = "<group>"; };
-		29E08FB829BFC68E0062FA80 /* PostCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCollectionViewCell.swift; sourceTree = "<group>"; };
+		29E08FB329BFC11A0062FA80 /* GramPostListCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GramPostListCollectionViewController.swift; sourceTree = "<group>"; };
+		29E08FB829BFC68E0062FA80 /* GramPostCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GramPostCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,7 +114,7 @@
 		29E08FB629BFC1720062FA80 /* Post */ = {
 			isa = PBXGroup;
 			children = (
-				29E08FB329BFC11A0062FA80 /* PostCollectionViewController.swift */,
+				29E08FB329BFC11A0062FA80 /* GramPostListCollectionViewController.swift */,
 				29E08FB729BFC6710062FA80 /* Custom Views */,
 			);
 			path = Post;
@@ -123,7 +123,7 @@
 		29E08FB729BFC6710062FA80 /* Custom Views */ = {
 			isa = PBXGroup;
 			children = (
-				29E08FB829BFC68E0062FA80 /* PostCollectionViewCell.swift */,
+				29E08FB829BFC68E0062FA80 /* GramPostCollectionViewCell.swift */,
 			);
 			path = "Custom Views";
 			sourceTree = "<group>";
@@ -207,9 +207,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				29E08FB929BFC68E0062FA80 /* PostCollectionViewCell.swift in Sources */,
+				29E08FB929BFC68E0062FA80 /* GramPostCollectionViewCell.swift in Sources */,
 				29E08FB229BFBE120062FA80 /* User.swift in Sources */,
-				29E08FB429BFC11A0062FA80 /* PostCollectionViewController.swift in Sources */,
+				29E08FB429BFC11A0062FA80 /* GramPostListCollectionViewController.swift in Sources */,
 				29E08F9329BFB9A90062FA80 /* AppDelegate.swift in Sources */,
 				29E08F9529BFB9A90062FA80 /* SceneDelegate.swift in Sources */,
 			);

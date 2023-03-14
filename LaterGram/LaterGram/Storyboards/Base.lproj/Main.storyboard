@@ -20,7 +20,7 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="zpn-JE-5al" kind="relationship" relationship="viewControllers" id="F7s-zW-ndu"/>
+                        <segue destination="Ln9-7x-MOG" kind="relationship" relationship="viewControllers" id="MBM-C6-dNN"/>
                         <segue destination="Gzw-zo-6Ek" kind="relationship" relationship="viewControllers" id="ZXN-MF-sDX"/>
                     </connections>
                 </tabBarController>
@@ -29,42 +29,77 @@
             <point key="canvasLocation" x="-418" y="-861"/>
         </scene>
         <!--Grams-->
-        <scene sceneID="nSX-80-LxR">
+        <scene sceneID="BXA-0R-92s">
             <objects>
-                <collectionViewController id="zpn-JE-5al" customClass="PostCollectionViewController" customModule="LaterGram" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="MAw-VP-HmR">
+                <collectionViewController id="Ln9-7x-MOG" customClass="GramPostListCollectionViewController" customModule="LaterGram" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="atO-O1-uKQ">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="fNK-c1-xl2">
-                            <size key="itemSize" width="393" height="128"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="iWg-iS-eRa">
+                            <size key="itemSize" width="393" height="524"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="gramsCell" id="gv5-LK-Huk" customClass="PostCollectionViewCell" customModule="LaterGram" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="393" height="128"/>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="gramsCell" id="Tft-gY-QVU" customClass="GramPostCollectionViewCell" customModule="LaterGram" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="524"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="F1M-FM-aBM">
-                                    <rect key="frame" x="0.0" y="0.0" width="393" height="128"/>
+                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="AV3-dE-jKS">
+                                    <rect key="frame" x="0.0" y="0.0" width="393" height="524"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6a3-Bm-9fE">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="393"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="6a3-Bm-9fE" secondAttribute="height" multiplier="1:1" id="U3b-2i-AO7"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(username)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ttY-6c-gTp">
+                                            <rect key="frame" x="12" y="405" width="369" height="18"/>
+                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="(message)" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dPP-Tn-m1K">
+                                            <rect key="frame" x="12" y="429" width="369" height="83"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="dPP-Tn-m1K" firstAttribute="leading" secondItem="AV3-dE-jKS" secondAttribute="leading" constant="12" id="40d-6y-BoT"/>
+                                        <constraint firstItem="6a3-Bm-9fE" firstAttribute="leading" secondItem="AV3-dE-jKS" secondAttribute="leading" id="4PD-YZ-zBr"/>
+                                        <constraint firstAttribute="trailing" secondItem="ttY-6c-gTp" secondAttribute="trailing" constant="12" id="4fm-Mn-J82"/>
+                                        <constraint firstAttribute="bottom" secondItem="dPP-Tn-m1K" secondAttribute="bottom" constant="12" id="M5W-j4-Cur"/>
+                                        <constraint firstItem="ttY-6c-gTp" firstAttribute="leading" secondItem="AV3-dE-jKS" secondAttribute="leading" constant="12" id="Ojw-Jg-GoO"/>
+                                        <constraint firstItem="ttY-6c-gTp" firstAttribute="top" secondItem="6a3-Bm-9fE" secondAttribute="bottom" constant="12" id="SIA-VD-0bT"/>
+                                        <constraint firstAttribute="trailing" secondItem="dPP-Tn-m1K" secondAttribute="trailing" constant="12" id="awl-gq-Bf1"/>
+                                        <constraint firstItem="dPP-Tn-m1K" firstAttribute="top" secondItem="ttY-6c-gTp" secondAttribute="bottom" constant="6" id="dFI-tq-HcL"/>
+                                        <constraint firstAttribute="trailing" secondItem="6a3-Bm-9fE" secondAttribute="trailing" id="jzn-8U-4Kd"/>
+                                        <constraint firstItem="6a3-Bm-9fE" firstAttribute="top" secondItem="AV3-dE-jKS" secondAttribute="top" id="vlu-i9-Y7H"/>
+                                    </constraints>
                                 </collectionViewCellContentView>
-                                <size key="customSize" width="393" height="128"/>
+                                <size key="customSize" width="393" height="524"/>
+                                <connections>
+                                    <outlet property="gramPostImageView" destination="6a3-Bm-9fE" id="m2B-8T-A10"/>
+                                    <outlet property="gramPostMessageLabel" destination="dPP-Tn-m1K" id="pPx-tR-aud"/>
+                                    <outlet property="gramPostUsernameLabel" destination="ttY-6c-gTp" id="OEU-ls-asM"/>
+                                </connections>
                             </collectionViewCell>
                         </cells>
                         <connections>
-                            <outlet property="dataSource" destination="zpn-JE-5al" id="8D2-5I-DJQ"/>
-                            <outlet property="delegate" destination="zpn-JE-5al" id="RBQ-3p-c5z"/>
+                            <outlet property="dataSource" destination="Ln9-7x-MOG" id="S9d-HE-bzh"/>
+                            <outlet property="delegate" destination="Ln9-7x-MOG" id="YHj-ge-cu0"/>
                         </connections>
                     </collectionView>
-                    <tabBarItem key="tabBarItem" title="Grams" id="FaR-ng-Gr3">
-                        <imageReference key="image" image="camera.shutter.button" catalog="system" variableValue="1"/>
-                    </tabBarItem>
+                    <tabBarItem key="tabBarItem" title="Grams" image="camera.circle" catalog="system" id="q02-la-5br"/>
                 </collectionViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="gNW-ea-Vqn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zzx-kp-zwu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-924.4274809160305" y="-124.64788732394366"/>
+            <point key="canvasLocation" x="-944.27480916030527" y="-125.35211267605635"/>
         </scene>
         <!--User-->
         <scene sceneID="cTy-5O-V7f">
@@ -86,7 +121,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="camera.shutter.button" catalog="system" width="128" height="108"/>
+        <image name="camera.circle" catalog="system" width="128" height="123"/>
         <image name="person.crop.circle" catalog="system" width="128" height="123"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

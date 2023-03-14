@@ -9,15 +9,15 @@ import UIKit
 
 struct User: Decodable {
     let username: String
-    let posts: [Post]
+    let gramPosts: [GramPost]
 }
 
-struct Post: Decodable {
-    var postMessage: String
-    var postPhoto: String?
-    let postCreationDate: Date
-    let postComments: [Comment]
-    let postUUID: UUID
+struct GramPost: Decodable {
+    var gramPostMessage: String
+    var gramPostPhoto: String?
+    let gramPostCreationDate: Date
+    let gramPostComments: [Comment]
+    let gramPostUUID: UUID
 }
 
 struct Comment: Decodable {
