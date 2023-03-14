@@ -21,7 +21,7 @@ class User {
     //MARK: - PROPERTIES
     let username: String
     var gramMessage: String
-    var gramPhoto: String?
+    var gramPhoto: String
     let gramCreationDate: Date
     let gramUUID: String
     
@@ -31,13 +31,13 @@ class User {
             Key.username         : self.username,
             Key.gramMessage      : self.gramMessage,
             Key.gramPhoto        : self.gramPhoto,
-            Key.gramCreationDate : self.gramCreationDate,
+            Key.gramCreationDate : self.gramCreationDate.timeIntervalSince1970,
             Key.gramUUID         : self.gramUUID
         ]
     }
     
     //MARK: - INITIALIZER
-    init(username: String, gramMessage: String, gramPhoto: String? = nil, gramCreationDate: Date = Date(), gramUUID: String = UUID().uuidString) {
+    init(username: String, gramMessage: String, gramPhoto: String, gramCreationDate: Date = Date(), gramUUID: String = UUID().uuidString) {
         self.username = username
         self.gramMessage = gramMessage
         self.gramPhoto = gramPhoto

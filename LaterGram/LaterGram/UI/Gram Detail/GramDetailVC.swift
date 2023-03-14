@@ -10,25 +10,32 @@ import UIKit
 class GramDetailVC: UIViewController {
 
     //MARK: - OUTLETS
-    @IBOutlet weak var gramPostImageView: UIImageView!
-    @IBOutlet weak var gramPostMessageTextView: UITextView!
+    @IBOutlet weak var gramImageView: UIImageView!
+    @IBOutlet weak var gramMessageTextView: UITextView!
     
     
     //MARK: - PROPERTIES
-    
+    var detailViewModel: GramDetailViewModel!
     
     //MARK: - LIFECYCLE
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        detailViewModel = GramDetailViewModel()
+        updateUI()
     }
     
     //MARK: - IB ACTIONS
     @IBAction func saveButtonTapped(_ sender: Any) {
-        
+        guard let gramMessage = gramMessageTextView.text else { return }
+        detailViewModel.save(gramMessage: gramMessage)
+        self.navigationController?.popViewController(animated: true)
     }
     
     
     //MARK: - FUNCTIONS
-
+    private func updateUI() {
+        guard let user = detailViewModel.user else { return }
+        gramImageView.image = UIImage(named: user.gramPhoto)
+        gramMessageTextView.text = user.gramMessage
+    }
 }
