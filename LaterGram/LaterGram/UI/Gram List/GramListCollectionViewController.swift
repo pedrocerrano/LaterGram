@@ -40,7 +40,6 @@ class GramListCollectionViewController: UICollectionViewController {
     }
     
     // MARK: UICollectionViewDelegate
-    
     /*
      // Uncomment this method to specify if the specified item should be highlighted during tracking
      override func collectionView(_ collectionView: UICollectionView, shouldHighlightItemAt indexPath: IndexPath) -> Bool {
@@ -75,7 +74,7 @@ class GramListCollectionViewController: UICollectionViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toGramPostDetailVC" {
             guard let destinationVC = segue.destination as? GramDetailVC,
-                  let index = collectionView.indexPath(for: GramCollectionViewCell()) else { print("Issue with segue.") ; return }
+                  let index = collectionView.indexPathsForSelectedItems?.first else { print("Issue with segue.") ; return }
             let user = viewModel.users[index.item]
             destinationVC.detailViewModel = GramDetailViewModel(user: user)
         }

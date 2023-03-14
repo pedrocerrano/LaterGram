@@ -20,7 +20,6 @@ class GramDetailVC: UIViewController {
     //MARK: - LIFECYCLE
     override func viewDidLoad() {
         super.viewDidLoad()
-        detailViewModel = GramDetailViewModel()
         updateUI()
     }
     

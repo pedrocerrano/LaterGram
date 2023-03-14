@@ -38,7 +38,7 @@
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(username)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ttY-6c-gTp">
-                                            <rect key="frame" x="12" y="405" width="177" height="18"/>
+                                            <rect key="frame" x="12" y="405" width="83" height="18"/>
                                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -49,8 +49,11 @@
                                             <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="(date)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ke4-am-MoR">
-                                            <rect key="frame" x="339" y="405" width="42" height="18"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="(date)" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ke4-am-MoR">
+                                            <rect key="frame" x="281" y="405" width="100" height="18"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="kCK-PP-bdC"/>
+                                            </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                             <color key="textColor" systemColor="secondaryLabelColor"/>
                                             <nil key="highlightedColor"/>
@@ -60,11 +63,11 @@
                                         <constraint firstItem="dPP-Tn-m1K" firstAttribute="leading" secondItem="AV3-dE-jKS" secondAttribute="leading" constant="12" id="40d-6y-BoT"/>
                                         <constraint firstItem="6a3-Bm-9fE" firstAttribute="leading" secondItem="AV3-dE-jKS" secondAttribute="leading" id="4PD-YZ-zBr"/>
                                         <constraint firstItem="Ke4-am-MoR" firstAttribute="top" secondItem="6a3-Bm-9fE" secondAttribute="bottom" constant="12" id="Jea-ue-aQc"/>
-                                        <constraint firstItem="Ke4-am-MoR" firstAttribute="leading" secondItem="ttY-6c-gTp" secondAttribute="trailing" constant="150" id="LHQ-25-GXV"/>
                                         <constraint firstAttribute="bottom" secondItem="dPP-Tn-m1K" secondAttribute="bottom" constant="12" id="M5W-j4-Cur"/>
                                         <constraint firstItem="ttY-6c-gTp" firstAttribute="leading" secondItem="AV3-dE-jKS" secondAttribute="leading" constant="12" id="Ojw-Jg-GoO"/>
                                         <constraint firstItem="ttY-6c-gTp" firstAttribute="top" secondItem="6a3-Bm-9fE" secondAttribute="bottom" constant="12" id="SIA-VD-0bT"/>
                                         <constraint firstAttribute="trailing" secondItem="Ke4-am-MoR" secondAttribute="trailing" constant="12" id="VjK-en-8Cp"/>
+                                        <constraint firstItem="Ke4-am-MoR" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="ttY-6c-gTp" secondAttribute="trailing" constant="8" symbolic="YES" id="aAz-cb-6Ku"/>
                                         <constraint firstAttribute="trailing" secondItem="dPP-Tn-m1K" secondAttribute="trailing" constant="12" id="awl-gq-Bf1"/>
                                         <constraint firstItem="dPP-Tn-m1K" firstAttribute="top" secondItem="ttY-6c-gTp" secondAttribute="bottom" constant="6" id="dFI-tq-HcL"/>
                                         <constraint firstAttribute="trailing" secondItem="6a3-Bm-9fE" secondAttribute="trailing" id="jzn-8U-4Kd"/>
@@ -204,7 +207,6 @@
         <!--Posts-->
         <scene sceneID="h8x-pS-9V3">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="3Fc-xX-b6c" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="oUj-vP-FWJ" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Posts" image="camera.circle" catalog="system" id="q02-la-5br"/>
                     <toolbarItems/>
@@ -218,12 +220,13 @@
                         <segue destination="Ln9-7x-MOG" kind="relationship" relationship="rootViewController" id="ngA-5e-cgl"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3Fc-xX-b6c" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-785" y="-125"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="VJt-YV-pc3"/>
+        <segue reference="TbI-pv-FSq"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="camera.circle" catalog="system" width="128" height="123"/>

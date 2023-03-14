@@ -23,5 +23,4 @@ class GramCollectionViewCell: UICollectionViewCell {
         gramDateLabel.text      = user.gramCreationDate.stringValue()
         gramMessageLabel.text   = user.gramMessage
     }
-    
 }
