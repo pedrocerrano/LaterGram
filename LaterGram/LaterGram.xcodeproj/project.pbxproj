@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		29D72B2729C0F4F400CBFD9E /* GramPostDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29D72B2629C0F4F400CBFD9E /* GramPostDetailVC.swift */; };
 		29E08F9329BFB9A90062FA80 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29E08F9229BFB9A90062FA80 /* AppDelegate.swift */; };
 		29E08F9529BFB9A90062FA80 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29E08F9429BFB9A90062FA80 /* SceneDelegate.swift */; };
 		29E08F9A29BFB9A90062FA80 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 29E08F9829BFB9A90062FA80 /* Main.storyboard */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		29D72B2629C0F4F400CBFD9E /* GramPostDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GramPostDetailVC.swift; sourceTree = "<group>"; };
 		29E08F8F29BFB9A90062FA80 /* LaterGram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LaterGram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		29E08F9229BFB9A90062FA80 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		29E08F9429BFB9A90062FA80 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -47,6 +49,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		29D72B2529C0F4CA00CBFD9E /* PostDetail */ = {
+			isa = PBXGroup;
+			children = (
+				29D72B2629C0F4F400CBFD9E /* GramPostDetailVC.swift */,
+			);
+			path = PostDetail;
+			sourceTree = "<group>";
+		};
 		29E08F8629BFB9A90062FA80 = {
 			isa = PBXGroup;
 			children = (
@@ -106,18 +116,19 @@
 		29E08FA929BFBA4B0062FA80 /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				29E08FB629BFC1720062FA80 /* Post */,
+				29E08FB629BFC1720062FA80 /* PostList */,
+				29D72B2529C0F4CA00CBFD9E /* PostDetail */,
 			);
 			path = UI;
 			sourceTree = "<group>";
 		};
-		29E08FB629BFC1720062FA80 /* Post */ = {
+		29E08FB629BFC1720062FA80 /* PostList */ = {
 			isa = PBXGroup;
 			children = (
 				29E08FB329BFC11A0062FA80 /* GramPostListCollectionViewController.swift */,
 				29E08FB729BFC6710062FA80 /* Custom Views */,
 			);
-			path = Post;
+			path = PostList;
 			sourceTree = "<group>";
 		};
 		29E08FB729BFC6710062FA80 /* Custom Views */ = {
@@ -207,6 +218,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				29D72B2729C0F4F400CBFD9E /* GramPostDetailVC.swift in Sources */,
 				29E08FB929BFC68E0062FA80 /* GramPostCollectionViewCell.swift in Sources */,
 				29E08FB229BFBE120062FA80 /* User.swift in Sources */,
 				29E08FB429BFC11A0062FA80 /* GramPostListCollectionViewController.swift in Sources */,

@@ -7,8 +7,6 @@
 
 import UIKit
 
-private let reuseIdentifier = "gramsCell"
-
 class GramPostListCollectionViewController: UICollectionViewController {
 
     override func viewDidLoad() {
@@ -26,7 +24,7 @@ class GramPostListCollectionViewController: UICollectionViewController {
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as? GramPostCollectionViewCell else { return UICollectionViewCell() }
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "gramsCell", for: indexPath) as? GramPostCollectionViewCell else { return UICollectionViewCell() }
 
         cell.configureUI()
     
@@ -63,7 +61,12 @@ class GramPostListCollectionViewController: UICollectionViewController {
     
     }
     */
-
+    
+    
+    //MARK: - NAVIGATION
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // "toGramPostDetailVC"
+    }
 } //: CLASS
 
 

@@ -13,16 +13,14 @@ class GramPostCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var gramPostImageView: UIImageView!
     @IBOutlet weak var gramPostUsernameLabel: UILabel!
     @IBOutlet weak var gramPostMessageLabel: UILabel!
+    @IBOutlet weak var gramPostDateLabel: UILabel!
     
-    override class func awakeFromNib() {
-        super.awakeFromNib()
-        
-    }
     
     //MARK: - FUNCTIONS
     func configureUI() {
         gramPostImageView.image = UIImage(named: "kids")
         gramPostUsernameLabel.text = "HappyDaddy"
+        gramPostDateLabel.text = "March 14, 2023"
         gramPostMessageLabel.text = "Being a Husband and a Daddy are two of the greatest joys of my life! Being a Husband and a Daddy are two of the greatest joys of my life!"
     }
     
