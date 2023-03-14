@@ -17,11 +17,11 @@ class GramCollectionViewCell: UICollectionViewCell {
     
     
     //MARK: - FUNCTIONS
-    func configureUI() {
-        gramImageView.image = UIImage(named: "kids")
-        gramUsernameLabel.text = "HappyDaddy"
-        gramDateLabel.text = "March 14, 2023"
-        gramMessageLabel.text = "Being a Husband and a Daddy are two of the greatest joys of my life! Being a Husband and a Daddy are two of the greatest joys of my life! Being a Husband and a Daddy are two of the greatest joys of my life! Being a Husband and a Daddy are two of the greatest joys of my life!"
+    func configureUI(withUser user: User) {
+        gramImageView.image     = UIImage(named: user.gramPhoto ?? "kids")
+        gramUsernameLabel.text  = user.username
+        gramDateLabel.text      = user.gramCreationDate.stringValue()
+        gramMessageLabel.text   = user.gramMessage
     }
     
 }

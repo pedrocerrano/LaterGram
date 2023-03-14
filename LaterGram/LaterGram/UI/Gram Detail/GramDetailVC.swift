@@ -15,7 +15,7 @@ class GramDetailVC: UIViewController {
     
     
     //MARK: - PROPERTIES
-
+    
     
     //MARK: - LIFECYCLE
     override func viewDidLoad() {

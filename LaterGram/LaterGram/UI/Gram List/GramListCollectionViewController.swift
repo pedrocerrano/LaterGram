@@ -9,23 +9,31 @@ import UIKit
 
 class GramListCollectionViewController: UICollectionViewController {
 
+    //MARK: - LIFECYCLE
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
+        viewModel = GramListViewModel(delegate: self)
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        collectionView.reloadData()
+    }
+    
+    
+    //MARK: - PROPERTIES
+    var viewModel: GramListViewModel!
     
 
     //MARK: - UICollectionViewDataSource
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5
+        return viewModel.users.count
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "gramsCell", for: indexPath) as? GramCollectionViewCell else { return UICollectionViewCell() }
 
+        let user = viewModel.users[indexPath.item]
         cell.configureUI()
     
         return cell
@@ -65,7 +73,11 @@ class GramListCollectionViewController: UICollectionViewController {
     
     //MARK: - NAVIGATION
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // "toGramPostDetailVC"
+        if segue.identifier == "toGramPostDetailVC" {
+            guard let destination = segue.destination as? GramDetailVC,
+                  let index = collectionView.indexPath(for: GramCollectionViewCell()) else { print("Issue with segue.") ; return }
+                  let user = viewModel.users[index.item]
+        }
     }
 } //: CLASS
 
@@ -76,5 +88,13 @@ extension GramListCollectionViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let width = view.bounds.width
         return CGSize(width: width, height: width + 100)
+    }
+}
+
+
+//MARK: - EXT: ViewModelDelegate
+extension GramListCollectionViewController: GramListViewModelDelegate {
+    func dataLoadedSuccessfully() {
+        collectionView.reloadData()
     }
 }

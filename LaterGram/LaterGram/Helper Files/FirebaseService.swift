@@ -16,18 +16,18 @@ enum FirebaseError: Error {
 
 protocol FirebaseSyncable {
     func saveToFirestore(user: User)
-    func loadGramsFromFirestore(completion: @escaping (Result<[User], FirebaseError>) -> Void)
+    func loadFromFirestore(completion: @escaping (Result<[User], FirebaseError>) -> Void)
     func delete(user: User)
 }
 
-struct FirebaseService {
+struct FirebaseService: FirebaseSyncable {
     let ref = Firestore.firestore()
     
     func saveToFirestore(user: User) {
         ref.collection(User.Key.collectionType).document(user.gramUUID).setData(user.dictionaryRepresentation)
     }
     
-    func loadGramsFromFirestore(completion: @escaping (Result<[User], FirebaseError>) -> Void) {
+    func loadFromFirestore(completion: @escaping (Result<[User], FirebaseError>) -> Void) {
         ref.collection(User.Key.collectionType).getDocuments { snapshot, error in
             if let error = error {
                 print(error.localizedDescription)
