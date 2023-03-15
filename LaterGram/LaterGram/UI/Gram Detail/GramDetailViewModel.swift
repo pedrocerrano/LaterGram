@@ -19,11 +19,11 @@ struct GramDetailViewModel {
     }
     
     //MARK: - FUNCTIONS
-    func save(username: String = "HappyDaddy", gramMessage: String, gramPhoto: String = "kids") {
+    func save(username: String = "HappyDaddy", gramMessage: String, gramPhotoURL: String = "kids") {
         if user != nil {
-            updateUser(withMessage: gramMessage, withPhoto: gramPhoto)
+            updateUser(withMessage: gramMessage, withPhoto: gramPhotoURL)
         } else {
-            let user = User(username: username, gramMessage: gramMessage, gramPhoto: gramPhoto)
+            let user = User(username: username, gramMessage: gramMessage, gramPhotoURL: gramPhotoURL)
             service.saveToFirestore(user: user)
         }
     }
@@ -31,7 +31,7 @@ struct GramDetailViewModel {
     private func updateUser(withMessage message: String, withPhoto photo: String) {
         guard let user = user else { return }
         user.gramMessage = message
-        user.gramPhoto   = photo
+        user.gramPhotoURL   = photo
         service.saveToFirestore(user: user)
     }
 }

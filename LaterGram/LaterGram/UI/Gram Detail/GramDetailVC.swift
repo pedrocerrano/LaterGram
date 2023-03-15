@@ -34,7 +34,7 @@ class GramDetailVC: UIViewController {
     //MARK: - FUNCTIONS
     private func updateUI() {
         guard let user = detailViewModel.user else { return }
-        gramImageView.image = UIImage(named: user.gramPhoto)
+        gramImageView.image = UIImage(named: user.gramPhotoURL)
         gramMessageTextView.text = user.gramMessage
     }
 }

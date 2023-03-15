@@ -69,8 +69,8 @@
 		29D72B2829C1028900CBFD9E /* Helper Files */ = {
 			isa = PBXGroup;
 			children = (
-				29D72B2929C102B600CBFD9E /* DateFormatter.swift */,
 				29D72B2B29C1036700CBFD9E /* FirebaseService.swift */,
+				29D72B2929C102B600CBFD9E /* DateFormatter.swift */,
 			);
 			path = "Helper Files";
 			sourceTree = "<group>";

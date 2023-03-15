@@ -12,7 +12,7 @@ class User {
     enum Key {
         static let username         = "username"
         static let gramMessage      = "message"
-        static let gramPhoto        = "photo"
+        static let gramPhotoURL     = "photoURL"
         static let gramCreationDate = "date"
         static let gramUUID         = "UUID"
         static let collectionType   = "gramPosts"
@@ -21,7 +21,7 @@ class User {
     //MARK: - PROPERTIES
     let username: String
     var gramMessage: String
-    var gramPhoto: String
+    var gramPhotoURL: String
     let gramCreationDate: Date
     let gramUUID: String
     
@@ -30,34 +30,34 @@ class User {
         [
             Key.username         : self.username,
             Key.gramMessage      : self.gramMessage,
-            Key.gramPhoto        : self.gramPhoto,
+            Key.gramPhotoURL     : self.gramPhotoURL,
             Key.gramCreationDate : self.gramCreationDate.timeIntervalSince1970,
             Key.gramUUID         : self.gramUUID
         ]
     }
     
     //MARK: - INITIALIZER
-    init(username: String, gramMessage: String, gramPhoto: String, gramCreationDate: Date = Date(), gramUUID: String = UUID().uuidString) {
-        self.username = username
-        self.gramMessage = gramMessage
-        self.gramPhoto = gramPhoto
+    init(username: String, gramMessage: String, gramPhotoURL: String, gramCreationDate: Date = Date(), gramUUID: String = UUID().uuidString) {
+        self.username         = username
+        self.gramMessage      = gramMessage
+        self.gramPhotoURL     = gramPhotoURL
         self.gramCreationDate = gramCreationDate
-        self.gramUUID = gramUUID
+        self.gramUUID         = gramUUID
     }
 }
 
 extension User {
     convenience init?(fromDictionary dictionary: [String : Any]) {
         guard let username = dictionary[Key.username] as? String,
-              let message = dictionary[Key.gramMessage] as? String,
-              let photo = dictionary[Key.gramPhoto] as? String,
-              let date = dictionary[Key.gramCreationDate] as? Double,
-              let uuid = dictionary[Key.gramUUID] as? String else {
+              let message  = dictionary[Key.gramMessage] as? String,
+              let photoURL = dictionary[Key.gramPhotoURL] as? String,
+              let date     = dictionary[Key.gramCreationDate] as? Double,
+              let uuid     = dictionary[Key.gramUUID] as? String else {
             print("Failed to initialize object.")
             return nil
         }
         
-        self.init(username: username, gramMessage: message, gramPhoto: photo, gramCreationDate: Date(timeIntervalSince1970: date), gramUUID: uuid)
+        self.init(username: username, gramMessage: message, gramPhotoURL: photoURL, gramCreationDate: Date(timeIntervalSince1970: date), gramUUID: uuid)
     }
 }
 

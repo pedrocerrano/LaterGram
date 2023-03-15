@@ -18,7 +18,7 @@ class GramCollectionViewCell: UICollectionViewCell {
     
     //MARK: - FUNCTIONS
     func configureUI(withUser user: User) {
-        gramImageView.image     = UIImage(named: user.gramPhoto)
+        gramImageView.image     = UIImage(named: user.gramPhotoURL)
         gramUsernameLabel.text  = user.username
         gramDateLabel.text      = user.gramCreationDate.stringValue()
         gramMessageLabel.text   = user.gramMessage
