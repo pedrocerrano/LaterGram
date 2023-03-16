@@ -16,11 +16,24 @@ class GramCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var gramDateLabel: UILabel!
     
     
+    //MARK: - PROPERTIES
+    let service = FirebaseService()
+    
+    
     //MARK: - FUNCTIONS
     func configureUI(withUser user: User) {
-        gramImageView.image     = UIImage(named: user.gramPhotoURL)
         gramUsernameLabel.text  = user.username
         gramDateLabel.text      = user.gramCreationDate.stringValue()
         gramMessageLabel.text   = user.gramMessage
+        
+        service.fetchImage(from: user) { result in
+            switch result {
+            case .success(let image):
+                self.gramImageView.image = image
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
     }
 }
+

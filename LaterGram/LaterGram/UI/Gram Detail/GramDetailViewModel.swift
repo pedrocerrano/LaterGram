@@ -5,7 +5,9 @@
 //  Created by iMac Pro on 3/14/23.
 //
 
-import Foundation
+import UIKit
+
+#warning("Might need a protocol")
 
 struct GramDetailViewModel {
     
@@ -19,19 +21,28 @@ struct GramDetailViewModel {
     }
     
     //MARK: - FUNCTIONS
-    func save(username: String = "HappyDaddy", gramMessage: String, gramPhotoURL: String = "kids") {
-        if user != nil {
-            updateUser(withMessage: gramMessage, withPhoto: gramPhotoURL)
+    func save(username: String = "HappyDaddy", gramMessage: String, gramPhoto: UIImage) {
+        if let user = user {
+            user.username    = username
+            user.gramMessage = gramMessage
+            service.updateImage(user, withImage: gramPhoto)
+#warning("Remeber completion")
         } else {
-            let user = User(username: username, gramMessage: gramMessage, gramPhotoURL: gramPhotoURL)
-            service.saveToFirestore(user: user)
+            service.saveToFirebase(username: username, message: gramMessage, image: gramPhoto)
+#warning("Remeber completion")
         }
     }
     
-    private func updateUser(withMessage message: String, withPhoto photo: String) {
+    func getImage(completion: @escaping (UIImage?) -> Void) {
         guard let user = user else { return }
-        user.gramMessage = message
-        user.gramPhotoURL   = photo
-        service.saveToFirestore(user: user)
+        service.fetchImage(from: user) { result in
+            switch result {
+            case .success(let image):
+                completion(image)
+            case .failure(let error):
+                print(error.localizedDescription)
+                completion(nil)
+            }
+        }
     }
 }

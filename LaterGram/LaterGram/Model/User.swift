@@ -15,11 +15,13 @@ class User {
         static let gramPhotoURL     = "photoURL"
         static let gramCreationDate = "date"
         static let gramUUID         = "UUID"
+        
         static let collectionType   = "gramPosts"
+        static let storageRef       = "images"
     }
     
     //MARK: - PROPERTIES
-    let username: String
+    var username: String
     var gramMessage: String
     var gramPhotoURL: String
     let gramCreationDate: Date
@@ -37,7 +39,7 @@ class User {
     }
     
     //MARK: - INITIALIZER
-    init(username: String, gramMessage: String, gramPhotoURL: String, gramCreationDate: Date = Date(), gramUUID: String = UUID().uuidString) {
+    init(username: String, gramMessage: String, gramPhotoURL: String, gramCreationDate: Date = Date(), gramUUID: String) {
         self.username         = username
         self.gramMessage      = gramMessage
         self.gramPhotoURL     = gramPhotoURL

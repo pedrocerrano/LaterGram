@@ -16,17 +16,20 @@ class GramDetailVC: UIViewController {
     
     //MARK: - PROPERTIES
     var detailViewModel: GramDetailViewModel!
+
     
     //MARK: - LIFECYCLE
     override func viewDidLoad() {
         super.viewDidLoad()
         updateUI()
+        setupImageView()
     }
-    
+
     //MARK: - IB ACTIONS
     @IBAction func saveButtonTapped(_ sender: Any) {
-        guard let gramMessage = gramMessageTextView.text else { return }
-        detailViewModel.save(gramMessage: gramMessage)
+        guard let gramMessage = gramMessageTextView.text,
+              let image = gramImageView.image else { return }
+        detailViewModel.save(gramMessage: gramMessage, gramPhoto: image)
         self.navigationController?.popViewController(animated: true)
     }
     
@@ -34,7 +37,37 @@ class GramDetailVC: UIViewController {
     //MARK: - FUNCTIONS
     private func updateUI() {
         guard let user = detailViewModel.user else { return }
-        gramImageView.image = UIImage(named: user.gramPhotoURL)
         gramMessageTextView.text = user.gramMessage
+
+        detailViewModel.getImage { image in
+            self.gramImageView.image = image
+        }
+    }
+    
+    //MARK: - TAP GESTURE
+    func setupImageView() {
+        gramImageView.contentMode = .scaleAspectFit
+        gramImageView.isUserInteractionEnabled = true
+        
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(imageViewTapped))
+        gramImageView.addGestureRecognizer(tapGesture)
+    }
+    
+    @objc func imageViewTapped() {
+        let picker = UIImagePickerController()
+        picker.sourceType = .photoLibrary
+        picker.delegate = self
+        picker.allowsEditing = true
+        present(picker, animated: true)
+    }
+} //: CLASS
+
+
+//MARK: - EXT: IMAGE PICKER
+extension GramDetailVC: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        picker.dismiss(animated: true)
+        guard let image = info[UIImagePickerController.InfoKey.editedImage] as? UIImage else { return }
+        gramImageView.image = image
     }
 }

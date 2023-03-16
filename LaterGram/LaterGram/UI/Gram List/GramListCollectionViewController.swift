@@ -72,11 +72,13 @@ class GramListCollectionViewController: UICollectionViewController {
     
     //MARK: - NAVIGATION
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let destinationVC = segue.destination as? GramDetailVC else { return }
         if segue.identifier == "toGramPostDetailVC" {
-            guard let destinationVC = segue.destination as? GramDetailVC,
-                  let index = collectionView.indexPathsForSelectedItems?.first else { print("Issue with segue.") ; return }
+                  guard let index = collectionView.indexPathsForSelectedItems?.first else { print("Issue with segue.") ; return }
             let user = viewModel.users[index.item]
             destinationVC.detailViewModel = GramDetailViewModel(user: user)
+        } else {
+            destinationVC.detailViewModel = GramDetailViewModel()
         }
     }
 } //: CLASS
@@ -87,7 +89,7 @@ extension GramListCollectionViewController: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let width = view.bounds.width
-        return CGSize(width: width, height: width + 100)
+        return CGSize(width: width, height: width)
     }
 }
 

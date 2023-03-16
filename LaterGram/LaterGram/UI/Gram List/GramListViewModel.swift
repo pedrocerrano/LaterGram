@@ -38,7 +38,7 @@ class GramListViewModel {
     
     func deleteGram(index: Int) {
         let user = users[index]
-        service.delete(user: user)
+        service.deleteGram(from: user)
         self.users.remove(at: index)
     }
 }
