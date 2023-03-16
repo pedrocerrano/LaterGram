@@ -21,12 +21,12 @@ class GramCollectionViewCell: UICollectionViewCell {
     
     
     //MARK: - FUNCTIONS
-    func configureUI(withUser user: User) {
-        gramUsernameLabel.text  = user.username
-        gramDateLabel.text      = user.gramCreationDate.stringValue()
-        gramMessageLabel.text   = user.gramMessage
+    func configureUI(withGram gram: Gram) {
+        gramUsernameLabel.text  = gram.username
+        gramDateLabel.text      = gram.gramCreationDate.stringValue()
+        gramMessageLabel.text   = gram.gramMessage
         
-        service.fetchImage(from: user) { result in
+        service.fetchImage(from: gram) { result in
             switch result {
             case .success(let image):
                 self.gramImageView.image = image

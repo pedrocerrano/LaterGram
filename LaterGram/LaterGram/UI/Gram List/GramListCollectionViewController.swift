@@ -17,7 +17,7 @@ class GramListCollectionViewController: UICollectionViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        viewModel.loadUsers()
+        viewModel.loadGrams()
     }
     
     
@@ -27,14 +27,14 @@ class GramListCollectionViewController: UICollectionViewController {
     
     //MARK: - UICollectionViewDataSource
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return viewModel.users.count
+        return viewModel.grams.count
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "gramsCell", for: indexPath) as? GramCollectionViewCell else { return UICollectionViewCell() }
         
-        let user = viewModel.users[indexPath.item]
-        cell.configureUI(withUser: user)
+        let gram = viewModel.grams[indexPath.item]
+        cell.configureUI(withGram: gram)
         
         return cell
     }
@@ -75,8 +75,8 @@ class GramListCollectionViewController: UICollectionViewController {
         guard let destinationVC = segue.destination as? GramDetailVC else { return }
         if segue.identifier == "toGramPostDetailVC" {
                   guard let index = collectionView.indexPathsForSelectedItems?.first else { print("Issue with segue.") ; return }
-            let user = viewModel.users[index.item]
-            destinationVC.detailViewModel = GramDetailViewModel(user: user, delegate: destinationVC.self)
+            let gram = viewModel.grams[index.item]
+            destinationVC.detailViewModel = GramDetailViewModel(gram: gram, delegate: destinationVC.self)
         } else {
             destinationVC.detailViewModel = GramDetailViewModel(delegate: destinationVC.self)
         }

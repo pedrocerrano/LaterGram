@@ -21,7 +21,7 @@
 		29E08FAB29BFBBCD0062FA80 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 29E08FAA29BFBBCD0062FA80 /* GoogleService-Info.plist */; };
 		29E08FAE29BFBC9D0062FA80 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 29E08FAD29BFBC9D0062FA80 /* FirebaseFirestore */; };
 		29E08FB029BFBC9D0062FA80 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 29E08FAF29BFBC9D0062FA80 /* FirebaseStorage */; };
-		29E08FB229BFBE120062FA80 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29E08FB129BFBE120062FA80 /* User.swift */; };
+		29E08FB229BFBE120062FA80 /* Gram.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29E08FB129BFBE120062FA80 /* Gram.swift */; };
 		29E08FB429BFC11A0062FA80 /* GramListCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29E08FB329BFC11A0062FA80 /* GramListCollectionViewController.swift */; };
 		29E08FB929BFC68E0062FA80 /* GramCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29E08FB829BFC68E0062FA80 /* GramCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
@@ -41,7 +41,7 @@
 		29E08F9E29BFB9AA0062FA80 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		29E08FA029BFB9AA0062FA80 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		29E08FAA29BFBBCD0062FA80 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		29E08FB129BFBE120062FA80 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		29E08FB129BFBE120062FA80 /* Gram.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gram.swift; sourceTree = "<group>"; };
 		29E08FB329BFC11A0062FA80 /* GramListCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GramListCollectionViewController.swift; sourceTree = "<group>"; };
 		29E08FB829BFC68E0062FA80 /* GramCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GramCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -59,6 +59,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		295DA87C29C3B90500026FFF /* Sign In */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Sign In";
+			sourceTree = "<group>";
+		};
+		295DA87D29C3B91200026FFF /* Create Account */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Create Account";
+			sourceTree = "<group>";
+		};
 		29D72B2529C0F4CA00CBFD9E /* Gram Detail */ = {
 			isa = PBXGroup;
 			children = (
@@ -130,7 +144,7 @@
 		29E08FA829BFBA430062FA80 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				29E08FB129BFBE120062FA80 /* User.swift */,
+				29E08FB129BFBE120062FA80 /* Gram.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -138,6 +152,8 @@
 		29E08FA929BFBA4B0062FA80 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				295DA87D29C3B91200026FFF /* Create Account */,
+				295DA87C29C3B90500026FFF /* Sign In */,
 				29E08FB629BFC1720062FA80 /* Gram List */,
 				29D72B2529C0F4CA00CBFD9E /* Gram Detail */,
 			);
@@ -245,7 +261,7 @@
 				29D72B2729C0F4F400CBFD9E /* GramDetailVC.swift in Sources */,
 				29E08FB929BFC68E0062FA80 /* GramCollectionViewCell.swift in Sources */,
 				29D72B2C29C1036700CBFD9E /* FirebaseService.swift in Sources */,
-				29E08FB229BFBE120062FA80 /* User.swift in Sources */,
+				29E08FB229BFBE120062FA80 /* Gram.swift in Sources */,
 				29D72B2E29C10B7600CBFD9E /* GramListViewModel.swift in Sources */,
 				29D72B2A29C102B600CBFD9E /* DateFormatter.swift in Sources */,
 				29E08FB429BFC11A0062FA80 /* GramListCollectionViewController.swift in Sources */,

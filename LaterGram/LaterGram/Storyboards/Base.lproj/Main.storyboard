@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Gram List Collection View Controller-->
+        <!--LaterGrams-->
         <scene sceneID="BXA-0R-92s">
             <objects>
                 <collectionViewController id="Ln9-7x-MOG" customClass="GramListCollectionViewController" customModule="LaterGram" customModuleProvider="target" sceneMemberID="viewController">
@@ -90,7 +90,7 @@
                             <outlet property="delegate" destination="Ln9-7x-MOG" id="YHj-ge-cu0"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" id="1om-hQ-t7D">
+                    <navigationItem key="navigationItem" title="LaterGrams" id="1om-hQ-t7D">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="BxW-Hr-gyh">
                             <connections>
                                 <segue destination="ypy-qw-CPR" kind="show" id="VJt-YV-pc3"/>

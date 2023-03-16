@@ -1,5 +1,5 @@
 //
-//  User.swift
+//  Gram.swift
 //  LaterGram
 //
 //  Created by iMac Pro on 3/13/23.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class User {
+class Gram {
     
     enum Key {
         static let username         = "username"
@@ -20,12 +20,14 @@ class User {
         static let storageRef       = "images"
     }
     
+    
     //MARK: - PROPERTIES
     var username: String
     var gramMessage: String
     var gramPhotoURL: String
     let gramCreationDate: Date
     let gramUUID: String
+    
     
     //MARK: - CREATING THE JSON
     var dictionaryRepresentation: [String : AnyHashable] {
@@ -38,6 +40,7 @@ class User {
         ]
     }
     
+    
     //MARK: - INITIALIZER
     init(username: String, gramMessage: String, gramPhotoURL: String, gramCreationDate: Date = Date(), gramUUID: String) {
         self.username         = username
@@ -48,7 +51,9 @@ class User {
     }
 }
 
-extension User {
+
+//MARK: - EXT: CONVENIENCE INIT
+extension Gram {
     convenience init?(fromDictionary dictionary: [String : Any]) {
         guard let username = dictionary[Key.username] as? String,
               let message  = dictionary[Key.gramMessage] as? String,
@@ -64,8 +69,9 @@ extension User {
 }
 
 
-extension User: Equatable {
-    static func == (lhs: User, rhs: User) -> Bool {
+//MARK: - EXT: ABILITY TO DELETE
+extension Gram: Equatable {
+    static func == (lhs: Gram, rhs: Gram) -> Bool {
         return lhs.gramUUID == rhs.gramUUID
     }
 }

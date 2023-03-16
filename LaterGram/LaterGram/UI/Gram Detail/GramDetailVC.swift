@@ -41,8 +41,8 @@ class GramDetailVC: UIViewController {
     //MARK: - FUNCTIONS
     private func updateUI() {
         configureDesignElements()
-        guard let user = detailViewModel.user else { return }
-        gramMessageTextView.text = user.gramMessage
+        guard let gram = detailViewModel.gram else { return }
+        gramMessageTextView.text = gram.gramMessage
         detailViewModel.getImage { image in
             self.gramImageView.image = image
         }
@@ -107,7 +107,7 @@ extension GramDetailVC: UIImagePickerControllerDelegate, UINavigationControllerD
 
 //MARK: - EXT: GramDetailViewModelDelegate
 extension GramDetailVC: GramDetailViewModelDelegate {
-    func userGramSuccessfullyHandled() {
+    func gramSuccessfullyHandled() {
         self.navigationController?.popViewController(animated: true)
     }
 }

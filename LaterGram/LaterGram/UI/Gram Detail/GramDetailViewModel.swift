@@ -8,40 +8,40 @@
 import UIKit
 
 protocol GramDetailViewModelDelegate: AnyObject {
-    func userGramSuccessfullyHandled()
+    func gramSuccessfullyHandled()
 }
 
 struct GramDetailViewModel {
     
     //MARK: - PROPERTIES
-    var user: User?
+    var gram: Gram?
     let service: FirebaseSyncable
     private weak var delegate: GramDetailViewModelDelegate?
     
-    init(user: User? = nil, service: FirebaseSyncable = FirebaseService(), delegate: GramDetailViewModelDelegate) {
-        self.user     = user
+    init(gram: Gram? = nil, service: FirebaseSyncable = FirebaseService(), delegate: GramDetailViewModelDelegate) {
+        self.gram     = gram
         self.service  = service
         self.delegate = delegate
     }
     
     //MARK: - FUNCTIONS
     func save(username: String = "HappyDaddy", message: String, gramPhoto: UIImage) {
-        if let user = user {
-            user.username    = username
-            user.gramMessage = message
-            service.updateImage(user, withImage: gramPhoto) {
-                self.delegate?.userGramSuccessfullyHandled()
+        if let gram = gram {
+            gram.username    = username
+            gram.gramMessage = message
+            service.updateImage(gram, withImage: gramPhoto) {
+                self.delegate?.gramSuccessfullyHandled()
             }
         } else {
             service.saveToFirebase(username: username, message: message, image: gramPhoto) {
-                self.delegate?.userGramSuccessfullyHandled()
+                self.delegate?.gramSuccessfullyHandled()
             }
         }
     }
     
     func getImage(completion: @escaping (UIImage?) -> Void) {
-        guard let user = user else { return }
-        service.fetchImage(from: user) { result in
+        guard let gram = gram else { return }
+        service.fetchImage(from: gram) { result in
             switch result {
             case .success(let image):
                 completion(image)
@@ -53,9 +53,9 @@ struct GramDetailViewModel {
     }
     
     func deleteGram() {
-        guard let user = user else { return }
-        service.deleteGram(from: user) {
-            self.delegate?.userGramSuccessfullyHandled()
+        guard let gram = gram else { return }
+        service.deleteGram(from: gram) {
+            self.delegate?.gramSuccessfullyHandled()
         }
     }
 }

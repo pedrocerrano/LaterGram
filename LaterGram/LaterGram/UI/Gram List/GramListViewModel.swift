@@ -14,7 +14,7 @@ protocol GramListViewModelDelegate: AnyObject {
 class GramListViewModel {
     
     //MARK: - PROPERTIES
-    var users: [User] = []
+    var grams: [Gram] = []
     private var service: FirebaseSyncable
     private weak var delegate: GramListViewModelDelegate?
     
@@ -24,11 +24,11 @@ class GramListViewModel {
     }
     
     //MARK: - FUNCTIONS
-    func loadUsers() {
+    func loadGrams() {
         service.loadFromFirestore { [weak self] result in
             switch result {
-            case .success(let users):
-                self?.users = users
+            case .success(let grams):
+                self?.grams = grams
                 self?.delegate?.dataLoadedSuccessfully()
             case .failure(let error):
                 print(error.localizedDescription)
