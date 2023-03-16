@@ -30,7 +30,7 @@ class GramDetailVC: UIViewController {
         guard let gramMessage = gramMessageTextView.text,
               let image = gramImageView.image else { return }
         detailViewModel.save(gramMessage: gramMessage, gramPhoto: image)
-        self.navigationController?.popViewController(animated: true)
+        
     }
     
     
@@ -69,5 +69,13 @@ extension GramDetailVC: UIImagePickerControllerDelegate, UINavigationControllerD
         picker.dismiss(animated: true)
         guard let image = info[UIImagePickerController.InfoKey.editedImage] as? UIImage else { return }
         gramImageView.image = image
+    }
+}
+
+
+//MARK: - EXT: GramDetailViewModelDelegate
+extension GramDetailVC: GramDetailViewModelDelegate {
+    func imageSuccessfullySaved() {
+        self.navigationController?.popViewController(animated: true)
     }
 }

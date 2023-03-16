@@ -7,17 +7,21 @@
 
 import UIKit
 
-#warning("Might need a protocol")
+protocol GramDetailViewModelDelegate: AnyObject {
+    func imageSuccessfullySaved()
+}
 
 struct GramDetailViewModel {
     
     //MARK: - PROPERTIES
     var user: User?
     let service: FirebaseSyncable
+    private weak var delegate: GramDetailViewModelDelegate?
     
-    init(user: User? = nil, service: FirebaseSyncable = FirebaseService()) {
-        self.user = user
-        self.service = service
+    init(user: User? = nil, service: FirebaseSyncable = FirebaseService(), delegate: GramDetailViewModelDelegate) {
+        self.user     = user
+        self.service  = service
+        self.delegate = delegate
     }
     
     //MARK: - FUNCTIONS
@@ -25,11 +29,13 @@ struct GramDetailViewModel {
         if let user = user {
             user.username    = username
             user.gramMessage = gramMessage
-            service.updateImage(user, withImage: gramPhoto)
-#warning("Remeber completion")
+            service.updateImage(user, withImage: gramPhoto) {
+                self.delegate?.imageSuccessfullySaved()
+            }
         } else {
-            service.saveToFirebase(username: username, message: gramMessage, image: gramPhoto)
-#warning("Remeber completion")
+            service.saveToFirebase(username: username, message: gramMessage, image: gramPhoto) {
+                self.delegate?.imageSuccessfullySaved()
+            }
         }
     }
     

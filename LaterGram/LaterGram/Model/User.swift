@@ -16,7 +16,7 @@ class User {
         static let gramCreationDate = "date"
         static let gramUUID         = "UUID"
         
-        static let collectionType   = "gramPosts"
+        static let collectionType   = "userGrams"
         static let storageRef       = "images"
     }
     

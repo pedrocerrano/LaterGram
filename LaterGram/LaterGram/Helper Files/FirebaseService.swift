@@ -16,14 +16,14 @@ enum FirebaseError: Error {
 }
 
 protocol FirebaseSyncable {
-    func saveToFirebase(username: String, message: String, image: UIImage)
+    func saveToFirebase(username: String, message: String, image: UIImage, completion: @escaping () -> Void)
     func loadFromFirestore(completion: @escaping (Result<[User], FirebaseError>) -> Void)
     func deleteGram(from user: User)
     
     func saveImage(_ image: UIImage, withUUID uuidString: String, completion: @escaping (Result<URL, FirebaseError>) -> Void)
     func fetchImage(from user: User, completion: @escaping (Result<UIImage, FirebaseError>) -> Void)
     func deleteImage(from user: User)
-    func updateImage(_ user: User, withImage newImage: UIImage)
+    func updateImage(_ user: User, withImage newImage: UIImage, completion: @escaping () -> Void)
 }
 
 struct FirebaseService: FirebaseSyncable {
@@ -34,8 +34,7 @@ struct FirebaseService: FirebaseSyncable {
     
     
     //MARK: - MODEL FUNCTIONS
-    func saveToFirebase(username: String, message: String, image: UIImage) {
-#warning("Don't forget the completion if it takes time to reload cell after popping")
+    func saveToFirebase(username: String, message: String, image: UIImage, completion: @escaping () -> Void) {
         
         let uuid = UUID().uuidString
         saveImage(image, withUUID: uuid) { result in
@@ -43,6 +42,7 @@ struct FirebaseService: FirebaseSyncable {
             case .success(let imageURL):
                 let user = User(username: username, gramMessage: message, gramPhotoURL: imageURL.absoluteString, gramUUID: uuid)
                 ref.collection(User.Key.collectionType).document(user.gramUUID).setData(user.dictionaryRepresentation)
+                completion()
             case .failure(let savingFailure):
                 print("Failed saving to Firebase: \(savingFailure)")
             }
@@ -122,12 +122,12 @@ struct FirebaseService: FirebaseSyncable {
         storage.child(User.Key.storageRef).child(user.gramUUID).delete(completion: nil)
     }
     
-    func updateImage(_ user: User, withImage newImage: UIImage) {
-#warning("Don't forget the completion if it takes time to reload cell after popping")
+    func updateImage(_ user: User, withImage newImage: UIImage, completion: @escaping () -> Void) {
         saveImage(newImage, withUUID: user.gramUUID) { result in
             switch result {
             case .success(_):
                 ref.collection(User.Key.collectionType).document()
+                completion()
             case .failure(let failure):
                 print(failure)
                 return
