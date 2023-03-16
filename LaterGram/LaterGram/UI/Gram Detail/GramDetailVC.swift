@@ -28,9 +28,8 @@ class GramDetailVC: UIViewController {
     //MARK: - IB ACTIONS
     @IBAction func saveButtonTapped(_ sender: Any) {
         guard let gramMessage = gramMessageTextView.text,
-              let image = gramImageView.image else { return }
-        detailViewModel.save(gramMessage: gramMessage, gramPhoto: image)
-        
+              let image       = gramImageView.image else { return }
+        detailViewModel.save(message: gramMessage, gramPhoto: image)
     }
     
     

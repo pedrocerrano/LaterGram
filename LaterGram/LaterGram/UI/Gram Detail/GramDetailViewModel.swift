@@ -25,15 +25,15 @@ struct GramDetailViewModel {
     }
     
     //MARK: - FUNCTIONS
-    func save(username: String = "HappyDaddy", gramMessage: String, gramPhoto: UIImage) {
+    func save(username: String = "HappyDaddy", message: String, gramPhoto: UIImage) {
         if let user = user {
             user.username    = username
-            user.gramMessage = gramMessage
+            user.gramMessage = message
             service.updateImage(user, withImage: gramPhoto) {
                 self.delegate?.imageSuccessfullySaved()
             }
         } else {
-            service.saveToFirebase(username: username, message: gramMessage, image: gramPhoto) {
+            service.saveToFirebase(username: username, message: message, image: gramPhoto) {
                 self.delegate?.imageSuccessfullySaved()
             }
         }

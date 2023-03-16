@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		295DA87B29C3A61D00026FFF /* GramDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 295DA87929C3A61D00026FFF /* GramDetail.storyboard */; };
 		29D72B2729C0F4F400CBFD9E /* GramDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29D72B2629C0F4F400CBFD9E /* GramDetailVC.swift */; };
 		29D72B2A29C102B600CBFD9E /* DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29D72B2929C102B600CBFD9E /* DateFormatter.swift */; };
 		29D72B2C29C1036700CBFD9E /* FirebaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29D72B2B29C1036700CBFD9E /* FirebaseService.swift */; };
@@ -26,6 +27,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		295DA87A29C3A61D00026FFF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = LaterGram/Storyboards/Base.lproj/GramDetail.storyboard; sourceTree = "<group>"; };
 		29D72B2629C0F4F400CBFD9E /* GramDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GramDetailVC.swift; sourceTree = "<group>"; };
 		29D72B2929C102B600CBFD9E /* DateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatter.swift; sourceTree = "<group>"; };
 		29D72B2B29C1036700CBFD9E /* FirebaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseService.swift; sourceTree = "<group>"; };
@@ -62,6 +64,7 @@
 			children = (
 				29D72B2629C0F4F400CBFD9E /* GramDetailVC.swift */,
 				29D72B2F29C113B500CBFD9E /* GramDetailViewModel.swift */,
+				295DA87929C3A61D00026FFF /* GramDetail.storyboard */,
 			);
 			path = "Gram Detail";
 			sourceTree = "<group>";
@@ -226,6 +229,7 @@
 			files = (
 				29E08F9F29BFB9AA0062FA80 /* LaunchScreen.storyboard in Resources */,
 				29E08FAB29BFBBCD0062FA80 /* GoogleService-Info.plist in Resources */,
+				295DA87B29C3A61D00026FFF /* GramDetail.storyboard in Resources */,
 				29E08F9C29BFB9AA0062FA80 /* Assets.xcassets in Resources */,
 				29E08F9A29BFB9A90062FA80 /* Main.storyboard in Resources */,
 			);
@@ -254,6 +258,14 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		295DA87929C3A61D00026FFF /* GramDetail.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				295DA87A29C3A61D00026FFF /* Base */,
+			);
+			name = GramDetail.storyboard;
+			sourceTree = "<group>";
+		};
 		29E08F9829BFB9A90062FA80 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

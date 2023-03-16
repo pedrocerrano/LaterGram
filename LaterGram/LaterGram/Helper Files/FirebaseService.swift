@@ -126,7 +126,7 @@ struct FirebaseService: FirebaseSyncable {
         saveImage(newImage, withUUID: user.gramUUID) { result in
             switch result {
             case .success(_):
-                ref.collection(User.Key.collectionType).document()
+                ref.collection(User.Key.collectionType).document(user.gramUUID).setData(user.dictionaryRepresentation)
                 completion()
             case .failure(let failure):
                 print(failure)
