@@ -8,7 +8,7 @@
 import UIKit
 
 protocol GramDetailViewModelDelegate: AnyObject {
-    func imageSuccessfullySaved()
+    func userGramSuccessfullyHandled()
 }
 
 struct GramDetailViewModel {
@@ -30,11 +30,11 @@ struct GramDetailViewModel {
             user.username    = username
             user.gramMessage = message
             service.updateImage(user, withImage: gramPhoto) {
-                self.delegate?.imageSuccessfullySaved()
+                self.delegate?.userGramSuccessfullyHandled()
             }
         } else {
             service.saveToFirebase(username: username, message: message, image: gramPhoto) {
-                self.delegate?.imageSuccessfullySaved()
+                self.delegate?.userGramSuccessfullyHandled()
             }
         }
     }
@@ -49,6 +49,13 @@ struct GramDetailViewModel {
                 print(error.localizedDescription)
                 completion(nil)
             }
+        }
+    }
+    
+    func deleteGram() {
+        guard let user = user else { return }
+        service.deleteGram(from: user) {
+            self.delegate?.userGramSuccessfullyHandled()
         }
     }
 }

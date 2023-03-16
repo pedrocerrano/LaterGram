@@ -35,10 +35,4 @@ class GramListViewModel {
             }
         }
     }
-    
-    func deleteGram(index: Int) {
-        let user = users[index]
-        service.deleteGram(from: user)
-        self.users.remove(at: index)
-    }
 }

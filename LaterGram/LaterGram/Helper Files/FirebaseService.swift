@@ -18,7 +18,7 @@ enum FirebaseError: Error {
 protocol FirebaseSyncable {
     func saveToFirebase(username: String, message: String, image: UIImage, completion: @escaping () -> Void)
     func loadFromFirestore(completion: @escaping (Result<[User], FirebaseError>) -> Void)
-    func deleteGram(from user: User)
+    func deleteGram(from user: User, completion: @escaping () -> Void)
     
     func saveImage(_ image: UIImage, withUUID uuidString: String, completion: @escaping (Result<URL, FirebaseError>) -> Void)
     func fetchImage(from user: User, completion: @escaping (Result<UIImage, FirebaseError>) -> Void)
@@ -64,9 +64,10 @@ struct FirebaseService: FirebaseSyncable {
         }
     }
     
-    func deleteGram(from user: User) {
+    func deleteGram(from user: User, completion: @escaping () -> Void) {
         ref.collection(User.Key.collectionType).document(user.gramUUID).delete()
         deleteImage(from: user)
+        completion()
     }
     
     
