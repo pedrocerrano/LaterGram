@@ -29,7 +29,15 @@ struct CreateAccountViewModel {
             }
         } else {
             print("Passwords don't match.")
-            #warning("Build Present Alert later")
+//            presentPasswordAlertController()
         }
     }
+    
+//    func presentPasswordAlertController() {
+//        let view = UIViewController()
+//        let alertController = UIAlertController(title: "Passwords Don't Match", message: "Make sure you type the same password in each field.", preferredStyle: .alert)
+//        let confirmAction = UIAlertAction(title: "OK", style: .default)
+//        alertController.addAction(confirmAction)
+//        view.present(alertController, animated: true)
+//    }
 }
