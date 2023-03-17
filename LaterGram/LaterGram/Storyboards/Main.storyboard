@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+    </dependencies>
+    <scenes>
+        <!--GramDetail-->
+        <scene sceneID="ezo-Gl-TKh">
+            <objects>
+                <viewControllerPlaceholder storyboardName="GramDetail" id="ypy-qw-CPR" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="D10-Ky-xCB"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vo7-sF-rAj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="669" y="-202"/>
+        </scene>
+        <!--UIViewController-rwq-BD-9Hl-->
+        <scene sceneID="C7K-0K-eNg">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="UIViewController-rwq-BD-9Hl" storyboardName="CreateAccount" referencedIdentifier="UIViewController-rwq-BD-9Hl" id="aMi-Sx-OIb" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WAT-IW-ETC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="756" y="-244"/>
+        </scene>
+    </scenes>
+</document>

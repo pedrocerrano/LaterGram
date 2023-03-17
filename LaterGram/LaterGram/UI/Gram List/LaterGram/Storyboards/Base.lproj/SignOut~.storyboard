@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="oUj-vP-FWJ">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--LaterGram-->
+        <scene sceneID="BXA-0R-92s">
+            <objects>
+                <collectionViewController id="Ln9-7x-MOG" customClass="GramListCollectionViewController" customModule="LaterGram" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="atO-O1-uKQ">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="iWg-iS-eRa">
+                            <size key="itemSize" width="393" height="474"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="gramsCell" id="Tft-gY-QVU" customClass="GramCollectionViewCell" customModule="LaterGram" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="474"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="AV3-dE-jKS">
+                                    <rect key="frame" x="0.0" y="0.0" width="393" height="474"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6a3-Bm-9fE">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="262"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="6a3-Bm-9fE" secondAttribute="height" multiplier="3:2" id="U3b-2i-AO7"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(username)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ttY-6c-gTp">
+                                            <rect key="frame" x="12" y="274" width="83" height="18"/>
+                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="(message)" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dPP-Tn-m1K">
+                                            <rect key="frame" x="12" y="298" width="369" height="164"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="(date)" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ke4-am-MoR">
+                                            <rect key="frame" x="281" y="274" width="100" height="18"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="kCK-PP-bdC"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                            <color key="textColor" systemColor="secondaryLabelColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="dPP-Tn-m1K" firstAttribute="leading" secondItem="AV3-dE-jKS" secondAttribute="leading" constant="12" id="40d-6y-BoT"/>
+                                        <constraint firstItem="6a3-Bm-9fE" firstAttribute="leading" secondItem="AV3-dE-jKS" secondAttribute="leading" id="4PD-YZ-zBr"/>
+                                        <constraint firstItem="Ke4-am-MoR" firstAttribute="top" secondItem="6a3-Bm-9fE" secondAttribute="bottom" constant="12" id="Jea-ue-aQc"/>
+                                        <constraint firstAttribute="bottom" secondItem="dPP-Tn-m1K" secondAttribute="bottom" constant="12" id="M5W-j4-Cur"/>
+                                        <constraint firstItem="ttY-6c-gTp" firstAttribute="leading" secondItem="AV3-dE-jKS" secondAttribute="leading" constant="12" id="Ojw-Jg-GoO"/>
+                                        <constraint firstItem="ttY-6c-gTp" firstAttribute="top" secondItem="6a3-Bm-9fE" secondAttribute="bottom" constant="12" id="SIA-VD-0bT"/>
+                                        <constraint firstAttribute="trailing" secondItem="Ke4-am-MoR" secondAttribute="trailing" constant="12" id="VjK-en-8Cp"/>
+                                        <constraint firstItem="Ke4-am-MoR" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="ttY-6c-gTp" secondAttribute="trailing" constant="8" symbolic="YES" id="aAz-cb-6Ku"/>
+                                        <constraint firstAttribute="trailing" secondItem="dPP-Tn-m1K" secondAttribute="trailing" constant="12" id="awl-gq-Bf1"/>
+                                        <constraint firstItem="dPP-Tn-m1K" firstAttribute="top" secondItem="ttY-6c-gTp" secondAttribute="bottom" constant="6" id="dFI-tq-HcL"/>
+                                        <constraint firstAttribute="trailing" secondItem="6a3-Bm-9fE" secondAttribute="trailing" id="jzn-8U-4Kd"/>
+                                        <constraint firstItem="Ke4-am-MoR" firstAttribute="centerY" secondItem="ttY-6c-gTp" secondAttribute="centerY" id="nWg-mN-YrF"/>
+                                        <constraint firstItem="6a3-Bm-9fE" firstAttribute="top" secondItem="AV3-dE-jKS" secondAttribute="top" id="vlu-i9-Y7H"/>
+                                    </constraints>
+                                </collectionViewCellContentView>
+                                <size key="customSize" width="393" height="474"/>
+                                <connections>
+                                    <outlet property="gramDateLabel" destination="Ke4-am-MoR" id="dmT-D6-yy0"/>
+                                    <outlet property="gramImageView" destination="6a3-Bm-9fE" id="m2B-8T-A10"/>
+                                    <outlet property="gramMessageLabel" destination="dPP-Tn-m1K" id="pPx-tR-aud"/>
+                                    <outlet property="gramUsernameLabel" destination="ttY-6c-gTp" id="OEU-ls-asM"/>
+                                    <segue destination="ypy-qw-CPR" kind="show" identifier="toGramPostDetailVC" id="TbI-pv-FSq"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="Ln9-7x-MOG" id="S9d-HE-bzh"/>
+                            <outlet property="delegate" destination="Ln9-7x-MOG" id="YHj-ge-cu0"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" title="LaterGram" id="1om-hQ-t7D">
+                        <barButtonItem key="leftBarButtonItem" image="gearshape" catalog="system" id="kKl-9y-Dt7">
+                            <connections>
+                                <segue destination="eHi-Ff-GhH" kind="presentation" id="by0-5j-xHW"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="BxW-Hr-gyh">
+                            <connections>
+                                <segue destination="ypy-qw-CPR" kind="show" id="VJt-YV-pc3"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zzx-kp-zwu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-17.557251908396946" y="-125.35211267605635"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="h8x-pS-9V3">
+            <objects>
+                <navigationController storyboardIdentifier="GramListNavController" automaticallyAdjustsScrollViewInsets="NO" id="oUj-vP-FWJ" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="JIH-gk-l3t"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="joY-DK-bvD">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Ln9-7x-MOG" kind="relationship" relationship="rootViewController" id="ngA-5e-cgl"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3Fc-xX-b6c" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-785" y="-125"/>
+        </scene>
+        <!--GramDetail-->
+        <scene sceneID="ezo-Gl-TKh">
+            <objects>
+                <viewControllerPlaceholder storyboardName="GramDetail" id="ypy-qw-CPR" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="D10-Ky-xCB"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vo7-sF-rAj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="756.48854961832058" y="-125.35211267605635"/>
+        </scene>
+        <!--Sign OutVC-->
+        <scene sceneID="pIG-eM-wlb">
+            <objects>
+                <viewController id="eHi-Ff-GhH" customClass="SignOutVC" customModule="LaterGram" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gr3-WG-qzu">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="Ze7-0k-zgo"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HgY-JB-uNA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="999" y="-254"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="TbI-pv-FSq"/>
+    </inferredMetricsTieBreakers>
+    <resources>
+        <image name="gearshape" catalog="system" width="128" height="123"/>
+        <systemColor name="secondaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

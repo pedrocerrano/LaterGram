@@ -49,30 +49,29 @@ class GramDetailVC: UIViewController {
     }
     
     func configureDesignElements() {
-        gramImageView.layer.shadowColor   = UIColor.black.cgColor
-        gramImageView.layer.shadowOpacity = 0.2
-        gramImageView.layer.shadowRadius  = 7
-        gramImageView.layer.masksToBounds = false
-        gramImageView.layer.borderColor   = UIColor.white.cgColor
-        gramImageView.layer.borderWidth   = 1
-        gramImageView.backgroundColor     = .systemBackground
+        gramImageView.layer.shadowColor   = Constants.Configure.shadowColor
+        gramImageView.layer.shadowOpacity = Constants.Configure.shadowOpacity
+        gramImageView.layer.shadowRadius  = Constants.Configure.shadowRadius
+        gramImageView.layer.masksToBounds = Constants.Configure.masksToBounds
+        gramImageView.layer.borderColor   = Constants.Configure.borderColor
+        gramImageView.layer.borderWidth   = Constants.Configure.borderWidth
+        gramImageView.backgroundColor     = Constants.Configure.backgroundColor
         
-        gramMessageTextView.layer.shadowColor   = UIColor.black.cgColor
-        gramMessageTextView.layer.shadowOpacity = 0.2
-        gramMessageTextView.layer.shadowRadius  = 7
-        gramMessageTextView.layer.masksToBounds = false
-        gramMessageTextView.layer.borderColor   = UIColor.white.cgColor
-        gramMessageTextView.layer.borderWidth   = 1
-        gramMessageTextView.backgroundColor     = .systemBackground
+        gramMessageTextView.layer.shadowColor   = Constants.Configure.shadowColor
+        gramMessageTextView.layer.shadowOpacity = Constants.Configure.shadowOpacity
+        gramMessageTextView.layer.shadowRadius  = Constants.Configure.shadowRadius
+        gramMessageTextView.layer.masksToBounds = Constants.Configure.masksToBounds
+        gramMessageTextView.layer.borderColor   = Constants.Configure.borderColor
+        gramMessageTextView.layer.borderWidth   = Constants.Configure.borderWidth
+        gramMessageTextView.backgroundColor     = Constants.Configure.backgroundColor
         
-        deleteGramButton.layer.shadowColor   = UIColor.black.cgColor
-        deleteGramButton.layer.shadowOpacity = 0.2
-        deleteGramButton.layer.shadowRadius  = 7
-        deleteGramButton.layer.masksToBounds = false
-        deleteGramButton.layer.borderColor   = UIColor.white.cgColor
-        deleteGramButton.layer.borderWidth   = 1
-        deleteGramButton.backgroundColor     = .systemBackground
-        
+        deleteGramButton.layer.shadowColor   = Constants.Configure.shadowColor
+        deleteGramButton.layer.shadowOpacity = Constants.Configure.shadowOpacity
+        deleteGramButton.layer.shadowRadius  = Constants.Configure.shadowRadius
+        deleteGramButton.layer.masksToBounds = Constants.Configure.masksToBounds
+        deleteGramButton.layer.borderColor   = Constants.Configure.borderColor
+        deleteGramButton.layer.borderWidth   = Constants.Configure.borderWidth
+        deleteGramButton.backgroundColor     = Constants.Configure.backgroundColor
     }
     
     

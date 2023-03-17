@@ -8,6 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		295DA87B29C3A61D00026FFF /* GramDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 295DA87929C3A61D00026FFF /* GramDetail.storyboard */; };
+		295DA88029C3C3CB00026FFF /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 295DA87F29C3C3CB00026FFF /* FirebaseAuth */; };
+		295DA88229C3C4FE00026FFF /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 295DA88129C3C4FE00026FFF /* SignInVC.swift */; };
+		29C4E6EE29C3CB610024991E /* CreateAccountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29C4E6ED29C3CB610024991E /* CreateAccountVC.swift */; };
+		29C4E6F129C3D0F00024991E /* SignIn.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 29C4E6EF29C3D0F00024991E /* SignIn.storyboard */; };
+		29C4E6F329C3D10F0024991E /* CreateAccount.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 29C4E6F229C3D10F0024991E /* CreateAccount.storyboard */; };
+		29C4E6F529C3D1270024991E /* CreateAccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29C4E6F429C3D1270024991E /* CreateAccountViewModel.swift */; };
+		29C4E6F729C3D1460024991E /* SignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29C4E6F629C3D1460024991E /* SignInViewModel.swift */; };
+		29C4E6FA29C3D4120024991E /* GramList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 29C4E6F829C3D4120024991E /* GramList.storyboard */; };
+		29C4E6FC29C3D5A00024991E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 29C4E6FB29C3D5A00024991E /* Main.storyboard */; };
+		29C4E6FF29C3E0960024991E /* SignOutVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29C4E6FE29C3E0960024991E /* SignOutVC.swift */; };
+		29C4E70229C3E0E40024991E /* SignOut.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 29C4E70029C3E0E40024991E /* SignOut.storyboard */; };
+		29C4E70429C3E1850024991E /* SignOutViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29C4E70329C3E1850024991E /* SignOutViewModel.swift */; };
+		29C4E70629C3E7430024991E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29C4E70529C3E7430024991E /* Constants.swift */; };
 		29D72B2729C0F4F400CBFD9E /* GramDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29D72B2629C0F4F400CBFD9E /* GramDetailVC.swift */; };
 		29D72B2A29C102B600CBFD9E /* DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29D72B2929C102B600CBFD9E /* DateFormatter.swift */; };
 		29D72B2C29C1036700CBFD9E /* FirebaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29D72B2B29C1036700CBFD9E /* FirebaseService.swift */; };
@@ -15,7 +28,6 @@
 		29D72B3029C113B500CBFD9E /* GramDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29D72B2F29C113B500CBFD9E /* GramDetailViewModel.swift */; };
 		29E08F9329BFB9A90062FA80 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29E08F9229BFB9A90062FA80 /* AppDelegate.swift */; };
 		29E08F9529BFB9A90062FA80 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29E08F9429BFB9A90062FA80 /* SceneDelegate.swift */; };
-		29E08F9A29BFB9A90062FA80 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 29E08F9829BFB9A90062FA80 /* Main.storyboard */; };
 		29E08F9C29BFB9AA0062FA80 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 29E08F9B29BFB9AA0062FA80 /* Assets.xcassets */; };
 		29E08F9F29BFB9AA0062FA80 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 29E08F9D29BFB9AA0062FA80 /* LaunchScreen.storyboard */; };
 		29E08FAB29BFBBCD0062FA80 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 29E08FAA29BFBBCD0062FA80 /* GoogleService-Info.plist */; };
@@ -28,6 +40,18 @@
 
 /* Begin PBXFileReference section */
 		295DA87A29C3A61D00026FFF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = LaterGram/Storyboards/Base.lproj/GramDetail.storyboard; sourceTree = "<group>"; };
+		295DA88129C3C4FE00026FFF /* SignInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
+		29C4E6ED29C3CB610024991E /* CreateAccountVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountVC.swift; sourceTree = "<group>"; };
+		29C4E6F029C3D0F00024991E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = LaterGram/Storyboards/Base.lproj/SignIn.storyboard; sourceTree = "<group>"; };
+		29C4E6F229C3D10F0024991E /* CreateAccount.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CreateAccount.storyboard; sourceTree = "<group>"; };
+		29C4E6F429C3D1270024991E /* CreateAccountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewModel.swift; sourceTree = "<group>"; };
+		29C4E6F629C3D1460024991E /* SignInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewModel.swift; sourceTree = "<group>"; };
+		29C4E6F929C3D4120024991E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = LaterGram/Storyboards/Base.lproj/GramList.storyboard; sourceTree = "<group>"; };
+		29C4E6FB29C3D5A00024991E /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		29C4E6FE29C3E0960024991E /* SignOutVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignOutVC.swift; sourceTree = "<group>"; };
+		29C4E70129C3E0E40024991E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "LaterGram/UI/Gram List/LaterGram/Storyboards/Base.lproj/SignOut.storyboard"; sourceTree = "<group>"; };
+		29C4E70329C3E1850024991E /* SignOutViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignOutViewModel.swift; sourceTree = "<group>"; };
+		29C4E70529C3E7430024991E /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		29D72B2629C0F4F400CBFD9E /* GramDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GramDetailVC.swift; sourceTree = "<group>"; };
 		29D72B2929C102B600CBFD9E /* DateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatter.swift; sourceTree = "<group>"; };
 		29D72B2B29C1036700CBFD9E /* FirebaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseService.swift; sourceTree = "<group>"; };
@@ -36,7 +60,6 @@
 		29E08F8F29BFB9A90062FA80 /* LaterGram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LaterGram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		29E08F9229BFB9A90062FA80 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		29E08F9429BFB9A90062FA80 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		29E08F9929BFB9A90062FA80 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		29E08F9B29BFB9AA0062FA80 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		29E08F9E29BFB9AA0062FA80 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		29E08FA029BFB9AA0062FA80 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -52,6 +75,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				29E08FAE29BFBC9D0062FA80 /* FirebaseFirestore in Frameworks */,
+				295DA88029C3C3CB00026FFF /* FirebaseAuth in Frameworks */,
 				29E08FB029BFBC9D0062FA80 /* FirebaseStorage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -62,6 +86,9 @@
 		295DA87C29C3B90500026FFF /* Sign In */ = {
 			isa = PBXGroup;
 			children = (
+				295DA88129C3C4FE00026FFF /* SignInVC.swift */,
+				29C4E6F629C3D1460024991E /* SignInViewModel.swift */,
+				29C4E6EF29C3D0F00024991E /* SignIn.storyboard */,
 			);
 			path = "Sign In";
 			sourceTree = "<group>";
@@ -69,8 +96,28 @@
 		295DA87D29C3B91200026FFF /* Create Account */ = {
 			isa = PBXGroup;
 			children = (
+				29C4E6ED29C3CB610024991E /* CreateAccountVC.swift */,
+				29C4E6F429C3D1270024991E /* CreateAccountViewModel.swift */,
+				29C4E6F229C3D10F0024991E /* CreateAccount.storyboard */,
 			);
 			path = "Create Account";
+			sourceTree = "<group>";
+		};
+		295DA87E29C3C3CB00026FFF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		29C4E6FD29C3E05D0024991E /* Sign Out */ = {
+			isa = PBXGroup;
+			children = (
+				29C4E6FE29C3E0960024991E /* SignOutVC.swift */,
+				29C4E70329C3E1850024991E /* SignOutViewModel.swift */,
+				29C4E70029C3E0E40024991E /* SignOut.storyboard */,
+			);
+			path = "Sign Out";
 			sourceTree = "<group>";
 		};
 		29D72B2529C0F4CA00CBFD9E /* Gram Detail */ = {
@@ -88,6 +135,7 @@
 			children = (
 				29D72B2B29C1036700CBFD9E /* FirebaseService.swift */,
 				29D72B2929C102B600CBFD9E /* DateFormatter.swift */,
+				29C4E70529C3E7430024991E /* Constants.swift */,
 			);
 			path = "Helper Files";
 			sourceTree = "<group>";
@@ -97,6 +145,7 @@
 			children = (
 				29E08F9129BFB9A90062FA80 /* LaterGram */,
 				29E08F9029BFB9A90062FA80 /* Products */,
+				295DA87E29C3C3CB00026FFF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -135,7 +184,7 @@
 		29E08FA729BFBA000062FA80 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
-				29E08F9829BFB9A90062FA80 /* Main.storyboard */,
+				29C4E6FB29C3D5A00024991E /* Main.storyboard */,
 				29E08F9D29BFB9AA0062FA80 /* LaunchScreen.storyboard */,
 			);
 			path = Storyboards;
@@ -154,6 +203,7 @@
 			children = (
 				295DA87D29C3B91200026FFF /* Create Account */,
 				295DA87C29C3B90500026FFF /* Sign In */,
+				29C4E6FD29C3E05D0024991E /* Sign Out */,
 				29E08FB629BFC1720062FA80 /* Gram List */,
 				29D72B2529C0F4CA00CBFD9E /* Gram Detail */,
 			);
@@ -165,6 +215,7 @@
 			children = (
 				29E08FB329BFC11A0062FA80 /* GramListCollectionViewController.swift */,
 				29D72B2D29C10B7600CBFD9E /* GramListViewModel.swift */,
+				29C4E6F829C3D4120024991E /* GramList.storyboard */,
 				29E08FB729BFC6710062FA80 /* Custom Views */,
 			);
 			path = "Gram List";
@@ -197,6 +248,7 @@
 			packageProductDependencies = (
 				29E08FAD29BFBC9D0062FA80 /* FirebaseFirestore */,
 				29E08FAF29BFBC9D0062FA80 /* FirebaseStorage */,
+				295DA87F29C3C3CB00026FFF /* FirebaseAuth */,
 			);
 			productName = LaterGram;
 			productReference = 29E08F8F29BFB9A90062FA80 /* LaterGram.app */;
@@ -246,8 +298,12 @@
 				29E08F9F29BFB9AA0062FA80 /* LaunchScreen.storyboard in Resources */,
 				29E08FAB29BFBBCD0062FA80 /* GoogleService-Info.plist in Resources */,
 				295DA87B29C3A61D00026FFF /* GramDetail.storyboard in Resources */,
+				29C4E70229C3E0E40024991E /* SignOut.storyboard in Resources */,
+				29C4E6FC29C3D5A00024991E /* Main.storyboard in Resources */,
 				29E08F9C29BFB9AA0062FA80 /* Assets.xcassets in Resources */,
-				29E08F9A29BFB9A90062FA80 /* Main.storyboard in Resources */,
+				29C4E6F129C3D0F00024991E /* SignIn.storyboard in Resources */,
+				29C4E6FA29C3D4120024991E /* GramList.storyboard in Resources */,
+				29C4E6F329C3D10F0024991E /* CreateAccount.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,15 +315,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				29D72B2729C0F4F400CBFD9E /* GramDetailVC.swift in Sources */,
+				29C4E70629C3E7430024991E /* Constants.swift in Sources */,
 				29E08FB929BFC68E0062FA80 /* GramCollectionViewCell.swift in Sources */,
+				29C4E6EE29C3CB610024991E /* CreateAccountVC.swift in Sources */,
 				29D72B2C29C1036700CBFD9E /* FirebaseService.swift in Sources */,
+				29C4E6F529C3D1270024991E /* CreateAccountViewModel.swift in Sources */,
 				29E08FB229BFBE120062FA80 /* Gram.swift in Sources */,
+				29C4E70429C3E1850024991E /* SignOutViewModel.swift in Sources */,
+				295DA88229C3C4FE00026FFF /* SignInVC.swift in Sources */,
 				29D72B2E29C10B7600CBFD9E /* GramListViewModel.swift in Sources */,
+				29C4E6F729C3D1460024991E /* SignInViewModel.swift in Sources */,
 				29D72B2A29C102B600CBFD9E /* DateFormatter.swift in Sources */,
 				29E08FB429BFC11A0062FA80 /* GramListCollectionViewController.swift in Sources */,
 				29E08F9329BFB9A90062FA80 /* AppDelegate.swift in Sources */,
 				29D72B3029C113B500CBFD9E /* GramDetailViewModel.swift in Sources */,
 				29E08F9529BFB9A90062FA80 /* SceneDelegate.swift in Sources */,
+				29C4E6FF29C3E0960024991E /* SignOutVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,12 +345,28 @@
 			name = GramDetail.storyboard;
 			sourceTree = "<group>";
 		};
-		29E08F9829BFB9A90062FA80 /* Main.storyboard */ = {
+		29C4E6EF29C3D0F00024991E /* SignIn.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				29E08F9929BFB9A90062FA80 /* Base */,
+				29C4E6F029C3D0F00024991E /* Base */,
 			);
-			name = Main.storyboard;
+			name = SignIn.storyboard;
+			sourceTree = "<group>";
+		};
+		29C4E6F829C3D4120024991E /* GramList.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				29C4E6F929C3D4120024991E /* Base */,
+			);
+			name = GramList.storyboard;
+			sourceTree = "<group>";
+		};
+		29C4E70029C3E0E40024991E /* SignOut.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				29C4E70129C3E0E40024991E /* Base */,
+			);
+			name = SignOut.storyboard;
 			sourceTree = "<group>";
 		};
 		29E08F9D29BFB9AA0062FA80 /* LaunchScreen.storyboard */ = {
@@ -427,7 +506,7 @@
 				INFOPLIST_FILE = "LaterGram/Supporting Files/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = GramList;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -455,7 +534,7 @@
 				INFOPLIST_FILE = "LaterGram/Supporting Files/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = GramList;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -506,6 +585,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		295DA87F29C3C3CB00026FFF /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 29E08FAC29BFBC9D0062FA80 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
 		29E08FAD29BFBC9D0062FA80 /* FirebaseFirestore */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 29E08FAC29BFBC9D0062FA80 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
